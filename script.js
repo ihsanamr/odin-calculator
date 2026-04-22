@@ -93,7 +93,7 @@ function handleDecimal() {
   }
 
   if (operator === null) {
-    if (!num1.includes(".")) num += ".";
+    if (!num1.includes(".")) num1 += ".";
   } else if (num2 === null) {
     return;
   } else {
