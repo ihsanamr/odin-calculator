@@ -78,6 +78,10 @@ function handleOperator(value) {
     return;
   }
 
+  if (operator === null && num1[num1.length - 1] === ".") {
+    num1 += "0";
+  }
+
   operator = value;
   render();
 }
