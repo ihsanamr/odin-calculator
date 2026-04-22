@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="calculator-body">
+      <input type="text" id="display" readonly value="0" />
+
+      <div class="buttons">
+        <!-- Row 1 -->
+        <button data-action="clear" class="unique">AC</button>
+        <button data-action="delete" class="unique">DEL</button>
+        <button data-action="operator" class="unique" data-value="%">%</button>
+        <button data-action="operator" class="operator" data-value="/">
+          /
+        </button>
+
+        <!-- Row 2 -->
+        <button data-action="digit" class="num" data-value="7">7</button>
+        <button data-action="digit" class="num" data-value="8">8</button>
+        <button data-action="digit" class="num" data-value="9">9</button>
+        <button data-action="operator" class="operator" data-value="*">
+          x
+        </button>
+
+        <!-- Row 3 -->
+        <button data-action="digit" class="num" data-value="4">4</button>
+        <button data-action="digit" class="num" data-value="5">5</button>
+        <button data-action="digit" class="num" data-value="6">6</button>
+        <button data-action="operator" class="operator" data-value="-">
+          -
+        </button>
+
+        <!-- Row 4 -->
+        <button data-action="digit" class="num" data-value="1">1</button>
+        <button data-action="digit" class="num" data-value="2">2</button>
+        <button data-action="digit" class="num" data-value="3">3</button>
+        <button data-action="operator" class="operator" data-value="+">
+          +
+        </button>
+
+        <!-- Row 5 -->
+        <button data-action="digit" class="num num-zero" data-value="0">
+          0
+        </button>
+        <button data-action="decimal" class="num">.</button>
+        <button data-action="equals" class="operator">=</button>
+      </div>
+    </div>
+  </body>
+</html>
