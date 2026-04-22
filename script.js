@@ -93,9 +93,11 @@ function handleDecimal() {
   }
 
   if (operator === null) {
-    if (!num1.includes(".")) num1 += ".";
+    if (!num1.includes(".")) {
+      num1 = num1 === "0" ? "0." : num1 + ".";
+    }
   } else if (num2 === null) {
-    return;
+    num2 = "0.";
   } else {
     if (!num2.includes(".")) num2 += ".";
   }
@@ -153,17 +155,11 @@ function handleEquals() {
 }
 
 buttons.addEventListener("click", (e) => {
-  const btn = e.target;
-  console.log(btn);
+  const btn = e.target.closest("button[data-action]");
 
   if (!btn) return;
 
-  console.log(btn.dataset);
-
   const { action, value } = btn.dataset;
-
-  console.log(action);
-  console.log(value);
 
   switch (action) {
     case "digit":
